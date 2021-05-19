@@ -113,7 +113,8 @@ const buildHtml = () => {
       caseSensitive: true,
       collapseWhitespace: true,
       conservativeCollapse: true,
-      removeComments: true
+      removeComments: true,
+      removeEmptyAttributes: true
     }))
     .pipe(dest(`${BuildPaths.HTML}`));
 }
