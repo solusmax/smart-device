@@ -1,0 +1,28 @@
+<section class="{{mixes}} write-us" id="{{id}}">
+  <h2 class="write-us__title">{{title}}</h2>
+
+  <p class="write-us__subtitle">{{subtitle}}</p>
+
+  <form class="write-us__form" action="https://echo.htmlacademy.ru" method="POST">
+    <p class="write-us__item">
+      <input class="write-is__field" type="text" name="name" placeholder="Имя" required>
+    </p>
+    <p class="write-us__item">
+      <input class="write-is__field" type="tel" name="phone" placeholder="Телефон" required>
+    </p>
+    <p class="write-us__item">
+      <textarea class="write-is__field" name="message" placeholder="Ваш вопрос" rows="10" required></textarea>
+    </p>
+
+    <p class="write-us__item">
+      <button class="write-us__send button" type="submit">{{buttonCaption}}</button>
+    </p>
+
+    <p class="write-us__item">
+      <label class="write-us__privacy">
+        <input class="write-us__privacy-checkbox" type="checkbox" name="privacy" checked required>
+        Я согласен на обработку персональных данных
+      </label>
+    </p>
+  </form>
+</section>
