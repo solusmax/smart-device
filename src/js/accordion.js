@@ -5,7 +5,6 @@ const ACCORDION_CLOSED_CLASS = 'accordion--closed';
 
 const accordions = document.querySelectorAll('.accordion');
 
-
 export const setAccordionsListeners = () => {
   accordions.forEach((accordionNode) => {
     const accordionTitleNode = accordionNode.querySelector('.accordion__title');
