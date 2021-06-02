@@ -128,7 +128,7 @@
   margin: 0;
   padding: 0;
   padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+  padding-right: $mobile-padding + 30px;
   padding-top: 28px;
   padding-bottom: 28px;
 
@@ -140,7 +140,7 @@
 
   @media (min-width: $smartphone-width) {
     padding-left: $smartphone-padding;
-    padding-right: $smartphone-padding;
+    padding-right: $smartphone-padding + 30px;
   }
 
   @media (min-width: $tablet-width) {
