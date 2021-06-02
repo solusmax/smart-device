@@ -4,19 +4,25 @@
   <p class="write-us__subtitle">@@subtitle</p>
 
   <form class="write-us__form" action="https://echo.htmlacademy.ru" method="POST">
-    <p class="write-us__item">
+    <p class="write-us__name write-us__item">
       <input class="write-is__field" type="text" name="name" placeholder="Имя" required>
     </p>
-    <p class="write-us__item">
+
+    <p class="write-us__phone write-us__item">
       <input class="write-is__field" type="tel" name="phone" placeholder="Телефон" required>
     </p>
-    <p class="write-us__item">
-      <textarea class="write-is__field" name="message" placeholder="Ваш вопрос" rows="10" required></textarea>
+
+    <p class="write-is__message write-us__item">
+      <textarea class="write-is__message-field write-is__field" name="message" placeholder="Ваш вопрос" rows="10"
+        required></textarea>
     </p>
 
-      <button class="write-us__send button" type="submit">@@buttonCaption</button>
+    <p class="write-us__send write-us__item">
+      <button class="write-us__send-button button button--blue" type="submit">@@buttonCaption</button>
     </p>
 
+    <p class="write-us__privacy write-us__item">
+      <input class="write-us__privacy-checkbox visually-hidden" id="write-us-privacy-@@count" type="checkbox" name="privacy" required>
       <label class="write-us__privacy-label" for="write-us-privacy-@@count">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
     </p>
   </form>

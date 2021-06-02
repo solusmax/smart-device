@@ -1,0 +1,131 @@
+.contacts__inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contacts__item {
+  display: flex;
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  &:only-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: $smartphone-width) {
+    &:not(:first-child) {
+      margin-left: 22px;
+    }
+
+    &:only-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+
+    &:not(:first-child) {
+      margin-left: 0;
+    }
+
+    &:only-child {
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: $notebook-width) {
+    margin-right: 40px;
+
+    &:not(:first-child) {
+      margin-left: 0;
+    }
+
+    &:only-child {
+      margin-right: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 60px;
+
+    &:not(:first-child) {
+      margin-left: 0;
+    }
+
+    &:only-child {
+      margin-right: 60px;
+    }
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+
+  font-family: $font-pt-mono;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.125;
+  text-decoration: none;
+  color: $color-white;
+
+  background-image: url("#{$img}/contacts/envelope.svg");
+  background-size: 26px 19px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition-property: opacity color;
+  transition-duration: $transition-duration;
+
+  &--phone {
+    background-image: url("#{$img}/contacts/phone.svg");
+    background-size: 24px 24px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $notebook-width) {
+    width: auto;
+    padding-left: 32px;
+
+    background-position: 0 50%;
+
+    &:hover {
+      text-decoration: underline;
+
+      opacity: 1;
+    }
+
+    &:active {
+      color: darken($color-white, 15);
+
+      opacity: 1;
+    }
+  }
+}
+
+.contacts__link-text {
+  @include visually-hidden;
+
+  @media (min-width: $notebook-width) {
+    @include visually-unhidden;
+
+    margin-left: 6px;
+  }
+}

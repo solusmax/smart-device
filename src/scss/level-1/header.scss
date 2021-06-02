@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: $desktop-width;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+  padding-top: $mobile-padding;
+  padding-bottom: $mobile-padding;
+
+  @media (min-width: $smartphone-width) {
+    padding-left: $smartphone-padding;
+    padding-right: $smartphone-padding;
+    padding-top: $smartphone-padding;
+    padding-bottom: $smartphone-padding;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+    padding-top: $tablet-padding;
+    padding-bottom: $tablet-padding;
+  }
+
+  @media (min-width: $notebook-width) {
+    padding-left: $notebook-padding;
+    padding-right: $notebook-padding;
+    padding-top: $notebook-padding;
+    padding-bottom: $notebook-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+    padding-top: $desktop-padding;
+    padding-bottom: $desktop-padding;
+  }
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__contacts {
+  margin-left: 30px;
+}
+
+.header__order-call {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    min-height: 45px;
+    width: 180px;
+  }
+}

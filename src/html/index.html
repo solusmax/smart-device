@@ -18,70 +18,74 @@
     <section class="page__promo promo">
       <h2 class="visually-hidden">Промо</h2>
 
-      <p class="promo__tagline"><span class="promo__term">Печатные платы</span> <span class="promo__em-dash">—</span>
-        производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <p class="promo__tagline"><span class="promo__term">Печатные платы</span> <span class="visually-hidden">&mdash;</span>
+        <span class="promo__definition">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</span></p>
 
-      <!-- TODO Замена на button, когда подгружен JS -->
-      <a class="promo__order button" href="#write-us">Бесплатная консультация</a>
+      <div class="promo__order-call-wrapper">
+        <a class="promo__order-call button button--promo" href="#write-us">Бесплатная консультация</a>
+      </div>
     </section>
 
-    <section class="page__features features">
-      <h2 class="visually-hidden">Особенности</h2>
-
-      <ul class="features__list">
-        <li class="features__item">
-          <h3 class="features__name">Оперативные сроки</h3>
-          <p class="features__description">Усовершенствованная логистическая система позволяет нам просчитывать
-            стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки.</p>
-        </li>
-
-        <li class="features__item">
-          <h3 class="features__name">Крупные поставщики</h3>
-          <p class="features__description">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE,
-            HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
-        </li>
-
-        <li class="features__item">
-          <h3 class="features__name">Полная конфиденциальность</h3>
-          <p class="features__description">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
-        </li>
-
-        <li class="features__item">
-          <h3 class="features__name">Персонализация стоимости</h3>
-          <p class="features__description">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы
-            установить ту цену, которая Вас устраивает.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="page__about about">
-      <h2 class="about__title">О компании</h2>
-
-      <p class="about__paragraph">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
-        мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-
-      <p class="about__paragraph">Наши поставщики — мировые производители электронных компонентов: OSRAM, CREE,
-        HOLGLITRONIC, REFOND. Печатные платы и комплектующие Smart Devices применяются на предприятиях Российских
-        Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
-        Производители светотехники России.</p>
-
-      <a class="about__more button" href="about.html">Подробнее</a>
-    </section>
+    <div class="page__wrapper">
+      <section class="page__features features">
+        <h2 class="visually-hidden">Особенности</h2>
+        <ul class="features__list">
+          <li class="features__item">
+            <svg class="features__icon" width="30" height="36" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-stopwatch"></use>
+            </svg>
+            <h3 class="features__name">Оперативные сроки</h3>
+            <p class="features__description">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки.</p>
+          </li>
+          <li class="features__item features__item--provider">
+            <svg class="features__icon" width="32" height="32" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-hired"></use>
+            </svg>
+            <h3 class="features__name">Крупные поставщики</h3>
+            <p class="features__description">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.
+            </p>
+          </li>
+          <li class="features__item features__item--privacy">
+            <svg class="features__icon" width="31" height="26" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-detective"></use>
+            </svg>
+            <h3 class="features__name">Полная конфиденциальность</h3>
+            <p class="features__description">По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфеденциальность.</p>
+          </li>
+          <li class="features__item features__item--cost">
+            <svg class="features__icon" width="32" height="32" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-tag"></use>
+            </svg>
+            <h3 class="features__name">Персонализация стоимости</h3>
+            <p class="features__description">Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="page__about about">
+        <div class="about__inner">
+          <h2 class="about__title">О&nbsp;компании</h2>
+          <p class="about__paragraph">Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
+          <p class="about__paragraph">Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и&nbsp;комплектующие Smart Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+          <a class="about__more button button--white" href="about.html">Подробнее</a>
+        </div>
+      </section>
+    </div>
 
     <section class="page__services services">
-      <h2 class="services__title">Smart Device предлагает следующие товары и услуги</h2>
-
-      <ul class="services__list">
-        <li class="services__item">
-          <a class="services__more" href="manufacturing.html">Производство печатных плат</a>
-        </li>
-        <li class="services__item">
-          <a class="services__more" href="installation.html">Монтаж печатных плат</a>
-        </li>
-        <li class="services__item">
-          <a class="services__more" href="accessories.html">Комплектующие для светотехники</a>
-        </li>
-      </ul>
+      <div class="services__inner">
+        <h2 class="services__title">Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+        <ul class="services__list">
+          <li class="services__item">
+            <a class="services__more" href="manufacturing.html">Производство печатных плат</a>
+          </li>
+          <li class="services__item">
+            <a class="services__more services__more--installation" href="installation.html">Монтаж печатных плат</a>
+          </li>
+          <li class="services__item">
+            <a class="services__more services__more--accessories" href="accessories.html">Комплектующие для светотехники</a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <div class="page__write-us-wrapper">

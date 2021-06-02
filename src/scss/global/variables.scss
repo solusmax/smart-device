@@ -3,7 +3,61 @@
 $fonts: "../fonts";
 $img: "../img";
 
+// Шрифты
+
+$font-roboto-condensed: "Roboto Condensed", "Arial Narrow", sans-serif;
+$font-pt-mono: "PT Mono", "Courier New", "Courier", monospace;
+
+// Брейкпоинты
+
+$mobile-width: 320px;
+$smartphone-width: 520px;
+$tablet-width: 768px;
+$notebook-width: 1024px;
+$desktop-width: 1320px;
+
+$mobile-padding: 15px;
+$smartphone-padding: 25px;
+$tablet-padding: 35px;
+$notebook-padding: 45px;
+$desktop-padding: 60px;
+
+:root {
+  --smartphone-width: #{$smartphone-width};
+  --tablet-width: #{$tablet-width};
+
+  --header-height: #{38px + ($mobile-padding * 2)};
+
+  @media (min-width: $smartphone-width) {
+    --header-height: #{38px + ($smartphone-padding * 2)};
+  }
+
+  @media (min-width: $tablet-width) {
+    --header-height: #{52px + ($tablet-padding * 2)};
+  }
+
+  @media (min-width: $notebook-width) {
+    --header-height: #{54px + ($notebook-padding * 2)};
+  }
+
+  @media (min-width: $desktop-width) {
+    --header-height: #{54px + ($desktop-padding * 2)};
+  }
+}
+
 // Цвета
 
 $color-black: #000000;
+$color-blue: #00b2ff;
+$color-cyan: #1b2d37;
+$color-gray-100: #ebebeb;
+$color-gray-250: #cdcdcd;
+$color-gray-300: #c4c4c4;
+$color-gray-500: #666666;
+$color-gray-600: #626962;
+$color-red: #e65a5a;
 $color-white: #ffffff;
+
+// Анимации
+
+$transition-duration: 0.15s;

@@ -1,0 +1,76 @@
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10000;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+  padding-top: $mobile-padding;
+  padding-bottom: $mobile-padding;
+
+  background-color: rgba($color-black, 0.6);
+
+  &--shown {
+    display: flex;
+  }
+
+  @media (min-width: $smartphone-width) {
+    padding-left: $smartphone-padding;
+    padding-right: $smartphone-padding;
+    padding-top: $smartphone-padding;
+    padding-bottom: $smartphone-padding;
+  }
+}
+
+.modal__inner {
+  position: relative;
+
+  width: 490px;
+  max-height: 100%;
+  overflow: auto;
+
+  background-color: $color-blue;
+}
+
+.modal__close {
+  --cross-clickable-size: 48px;
+  --cross-icon-size: 16px;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: var(--cross-clickable-size);
+  height: var(--cross-clickable-size);
+  border: none;
+
+  background: none;
+  background-image: url("#{$img}/modal/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: var(--cross-icon-size) var(--cross-icon-size);
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    background-color: darken($color-blue, 5);
+  }
+
+  &:active {
+    background-color: darken($color-blue, 10);
+  }
+}
+
+.modal__close.focus-visible,
+.modal__close:focus-visible,
+.no-js .modal__close:focus {
+  @include focus(-3px);
+}

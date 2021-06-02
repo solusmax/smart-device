@@ -1,0 +1,126 @@
+.features {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.features__list {
+  display: grid;
+  row-gap: 20px;
+  width: 100%;
+  max-width: $desktop-width;
+  margin: 0;
+  padding: 0;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+
+  list-style: none;
+
+  @media (min-width: $smartphone-width) {
+    padding-left: $smartphone-padding;
+    padding-right: $smartphone-padding;
+  }
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    row-gap: 30px;
+    column-gap: 30px;
+  }
+  @media (min-width: $notebook-width) {
+    padding-left: $notebook-padding;
+    padding-right: $notebook-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+  }
+}
+
+.features__item {
+  width: 100%;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-width: 1px;
+  border-color: $color-gray-100;
+  border-style: solid;
+  border-left-width: 2px;
+  border-left-color: $color-blue;
+
+  background-color: $color-white;
+  transition-property: background-color border-color;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    border-color: $color-blue;
+
+    background-color: $color-blue;
+  }
+
+  @media (min-width: $notebook-width) {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+
+.features__icon {
+  display: block;
+  margin-bottom: 14px;
+
+  color: $color-blue;
+
+  transition-property: color;
+  transition-duration: $transition-duration;
+}
+
+.features__item:hover .features__icon {
+  color: $color-white;
+}
+
+.features__name {
+  margin: 0;
+  margin-bottom: 14px;
+  padding: 0;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $color-blue;
+
+  transition-property: color;
+  transition-duration: $transition-duration;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
+}
+
+.features__item:hover .features__name {
+  color: $color-white;
+}
+
+.features__description {
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-pt-mono;
+  font-size: 16px;
+  line-height: 1.375;
+  color: $color-gray-500;
+
+  transition-property: color;
+  transition-duration: $transition-duration;
+}
+
+.features__item:hover .features__description {
+  color: $color-white;
+}

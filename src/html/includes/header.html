@@ -1,24 +1,24 @@
 <header class="page__header header">
-  <a class="header__logo logo" href="index.html">
-    <picture>
-      <source srcset="img/logo/logo.svg" media="(min-width: 768px)">
-
-      <img class="logo__img" src="img/logo/logo-mobile.svg" alt="Логотип «Smart Device».">
-    </picture>
-  </a>
-
-  <address class="header__contacts contacts">
-    <ul class="contacts__list">
-      <li class="contacts__item">
-        <a class="contacts__link" href="mailto:info@sd.ru"><span class="contacts__link-inner">info@sd.ru</span></a>
-      </li>
-      <li class="contacts__item">
-        <a class="contacts__link" href="tel:+74950005252"><span class="contacts__link-inner">+7 (495) 000 52
-            52</span></a>
-      </li>
-    </ul>
-  </address>
-
-  <!-- TODO Замена на button, когда подгружен JS -->
-  <a class="header__order button" href="#write-us">Заказать звонок</a>
+  <div class="header__inner">
+    <a class="header__logo logo" href="index.html">
+      <picture>
+        <source srcset="img/logo/logo.svg" media="(min-width: 768px)">
+        <img class="logo__img" src="img/logo/logo-mobile.svg" alt="Логотип «Smart Device».">
+      </picture>
+    </a>
+    <address class="header__contacts contacts">
+      <ul class="contacts__inner">
+        <li class="contacts__item">
+          <a class="contacts__link" href="mailto:info@sd.ru">
+            <span class="contacts__link-text">info@sd.ru</span></a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--phone" href="tel:+74950005252">
+            <span class="contacts__link-text">+7 (495) 000 52 52</span>
+          </a>
+        </li>
+      </ul>
+    </address>
+    <a class="header__order-call button button--header" href="#write-us">Заказать звонок</a>
+  </div>
 </header>

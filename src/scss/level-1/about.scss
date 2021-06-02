@@ -1,0 +1,118 @@
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.about__inner {
+  position: relative;
+
+  width: 100%;
+  max-width: $desktop-width;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+  overflow: hidden;
+
+  color: $color-gray-500;
+
+  @media (min-width: $smartphone-width) {
+    padding-left: $smartphone-padding;
+    padding-right: $smartphone-padding;
+  }
+
+  @media (min-width: $tablet-width) {
+    --number-width: 132px;
+    --number-height: 348px;
+
+    min-height: var(--number-height);
+    padding-left: $tablet-padding + 180px;
+    padding-right: $tablet-padding;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: $tablet-padding;
+      top: 50%;
+
+      width: var(--number-width);
+      height: var(--number-height);
+
+      background-image: url("#{$img}/about/2005-tablet.png");
+      background-position: center;
+      background-size: var(--number-width) var(--number-height);
+      background-repeat: no-repeat;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  @media (min-width: $notebook-width) {
+    --number-width: 116px;
+    --number-height: 306px;
+
+    padding-left: $notebook-padding + 165px;
+    padding-right: $notebook-padding;
+
+    &::before {
+      left: $notebook-padding;
+
+      background-image: url("#{$img}/about/2005.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $desktop-padding + 165px;
+    padding-right: $desktop-padding;
+
+    &::before {
+      left: $desktop-padding;
+    }
+  }
+
+  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    @media (min-width: $tablet-width) {
+      &::before {
+        background-image: url("#{$img}/about/2005-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: $notebook-width) {
+      &::before {
+        background-image: url("#{$img}/about/2005@2x.png");
+      }
+    }
+  }
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.about__paragraph {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  font-family: $font-pt-mono;
+  font-size: 16px;
+  line-height: 1.375;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.about__more {
+  width: 180px;
+  min-height: 45px;
+}

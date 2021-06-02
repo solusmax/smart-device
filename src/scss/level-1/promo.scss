@@ -1,0 +1,255 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+  padding-bottom: 68px;
+  padding-top: calc(var(--header-height) + 218px);
+
+  color: $color-white;
+
+  background-color: $color-cyan;
+  background-image: url("#{$img}/background/particles-mobile.jpg");
+  background-repeat: repeat-y;
+  background-size: 768px 647px;
+  background-position: center;
+
+  overflow: hidden;
+
+  &::before {
+    --triangles-width: 474px;
+    --triangles-height: 360px;
+
+    content: "";
+
+    position: absolute;
+    top: calc(var(--header-height) + 7px);
+    left: calc(50%);
+    z-index: 1;
+
+    width: var(--triangles-width);
+    height: var(--triangles-height);
+
+    background-image: url("#{$img}/background/triangles.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &::after {
+    --pcb-width: 301px;
+    --pcb-height: 220px;
+
+    content: "";
+
+    position: absolute;
+    top: calc(var(--header-height) + 24px);
+    left: calc(50% + 16px);
+    z-index: 2;
+
+    width: calc(var(--pcb-width) - 1px); // Фикс размытия
+    height: var(--pcb-height);
+
+    background-image: url("#{$img}/promo/pcb-mobile.png");
+    background-size: var(--pcb-width) var(--pcb-height);
+    background-repeat: no-repeat;
+
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $smartphone-width) {
+    padding-left: $smartphone-padding;
+    padding-right: $smartphone-padding;
+    padding-top: calc(var(--header-height) + 90px);
+    padding-bottom: 120px;
+
+    &::before {
+      top: calc(var(--header-height));
+    }
+
+    &::after {
+      --pcb-width: 465px;
+      --pcb-height: 340px;
+
+      left: calc(50% + 280px);
+      top: calc(var(--header-height) + 20px);
+
+      background-image: url("#{$img}/promo/pcb-tablet.png");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+    padding-bottom: 145px;
+
+    background-image: url("#{$img}/background/particles-tablet.jpg");
+    background-size: 1500px 686px;
+  }
+
+  @media (min-width: $notebook-width) {
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+    padding-top: calc(var(--header-height) + 110px);
+    padding-bottom: 278px;
+
+    background-image: url("#{$img}/background/particles.jpg");
+    background-size: 2249px 1169px;
+    background-repeat: repeat;
+
+    &::before {
+      left: calc(50%);
+      top: calc(var(--header-height) + 78px);
+    }
+
+    &::after {
+      --pcb-width: 705px;
+      --pcb-height: 515px;
+
+      left: calc(50% + 320px);
+      top: calc(var(--header-height) + 63px);
+
+      background-image: url("#{$img}/promo/pcb.png");
+    }
+  }
+
+  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    background-image: url("#{$img}/background/particles-mobile@2x.jpg");
+
+    &::after {
+      background-image: url("#{$img}/promo/pcb-mobile@2x.png");
+    }
+
+    @media (min-width: $smartphone-width) {
+      &::after {
+        background-image: url("#{$img}/promo/pcb-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: url("#{$img}/background/particles-tablet@2x.jpg");
+    }
+
+    @media (min-width: $notebook-width) {
+      background-image: url("#{$img}/background/particles@2x.jpg");
+
+      &::after {
+        background-image: url("#{$img}/promo/pcb@2x.png");
+      }
+    }
+  }
+}
+
+.promo__tagline {
+  position: relative;
+  z-index: 3;
+
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 42px;
+  padding: 0;
+
+  @media (min-width: $smartphone-width) {
+    align-self: flex-start;
+  }
+
+  @media (min-width: $notebook-width) {
+    align-self: center;
+    width: 100%;
+    max-width: $desktop-width;
+  }
+}
+
+.promo__term {
+  margin-bottom: 30px;
+
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.175;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  @media (min-width: $smartphone-width) {
+    max-width: 370px;
+
+    font-size: 60px;
+    line-height: 1.16;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 40px;
+  }
+
+  @media (min-width: $notebook-width) {
+    max-width: 450px;
+
+    font-size: 80px;
+    line-height: 1.175;
+  }
+}
+
+.promo__definition {
+  position: relative;
+
+  max-width: 440px;
+  padding-left: 59px;
+
+  font-family: $font-pt-mono;
+  font-size: 16px;
+  line-height: 1.56;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    left: 11px;
+
+    width: 33px;
+    height: 2px;
+
+    background-color: $color-white;
+  }
+
+  @media (min-width: $smartphone-width) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 40px;
+
+    font-size: 22px;
+    line-height: 1.54;
+  }
+}
+
+.promo__order-call-wrapper {
+  position: relative;
+  z-index: 3;
+
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: $desktop-width;
+
+  @media (min-width: $smartphone-width) {
+    justify-content: flex-start;
+  }
+}
+
+.promo__order-call {
+  width: 288px;
+  min-height: 55px;
+
+  @media (min-width: $tablet-width) {
+    width: 380px;
+    margin-left: 40px;
+  }
+
+  @media (min-width: $notebook-width) {
+    width: 410px;
+  }
+}

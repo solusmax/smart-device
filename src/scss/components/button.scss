@@ -1,0 +1,109 @@
+.button {
+  display: block;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border: none;
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: $color-white;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: $color-blue;
+
+  transition-property: background-color color;
+  transition-duration: $transition-duration;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-blue, 5);
+  }
+
+  &:active {
+    background-color: darken($color-blue, 10);
+  }
+
+  &--header {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    border-width: 1px;
+    border-color: $color-white;
+    border-style: solid;
+
+    background-color: transparent;
+
+    &:hover {
+      color: $color-cyan;
+
+      background-color: $color-white;
+    }
+
+    &:active {
+      border-color: darken($color-white, 10);
+
+      background-color: darken($color-white, 10);
+    }
+  }
+
+  &--promo {
+    padding-top: 20px;
+
+    font-size: 16px;
+    line-height: 1.18;
+  }
+
+  &--white {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: $color-white;
+    border-width: 1px;
+    border-color: $color-blue;
+    border-style: solid;
+
+    color: $color-blue;
+    line-height: 1.14;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-blue;
+    }
+
+    &:active {
+      color: $color-white;
+      background-color: darken($color-blue, 5);
+    }
+  }
+
+  &--blue {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-width: 1px;
+    border-color: $color-white;
+    border-style: solid;
+
+    line-height: 1.14;
+
+    &:hover {
+      color: $color-blue;
+      background-color: $color-white;
+    }
+
+    &:active {
+      color: $color-blue;
+      background-color: darken($color-white, 5);
+    }
+  }
+}
