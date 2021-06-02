@@ -199,7 +199,10 @@
   position: relative;
 
   display: block;
-  padding-left: 33px;
+  padding-left: 43px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   font-family: $font-pt-mono;
   font-size: 14px;
@@ -208,14 +211,14 @@
 
   cursor: pointer;
 
-  transition-property: opacity;
+  transition-property: background-color;
   transition-duration: $transition-duration;
 
   &::before {
     content: "";
 
     position: absolute;
-    left: 0;
+    left: 10px;
     top: 50%;
 
     width: 16px;
@@ -224,8 +227,6 @@
     border-color: $color-white;
     border-style: solid;
 
-    background-color: $color-blue;
-
     transform: translateY(-50%);
   }
 
@@ -233,7 +234,7 @@
     content: "";
 
     position: absolute;
-    left: 0;
+    left: 10px;
     top: 50%;
 
     display: none;
@@ -249,11 +250,15 @@
   }
 
   &:hover {
-    opacity: 0.9;
+    background-color: darken($color-blue, 4);
   }
 
   &:active {
-    opacity: 0.8;
+    background-color: darken($color-blue, 8);
+  }
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
   }
 }
 
@@ -262,6 +267,7 @@
 }
 
 .write-us__privacy-checkbox:disabled + .write-us__privacy-label {
+  background-color: transparent;
   filter: grayscale(1);
   opacity: 0.5;
   cursor: default;
@@ -270,5 +276,5 @@
 .write-us__privacy-checkbox.focus-visible + .write-us__privacy-label,
 .write-us__privacy-checkbox:focus-visible + .write-us__privacy-label,
 .no-js .write-us__privacy-checkbox:focus + .write-us__privacy-label {
-  @include focus(2px);
+  @include focus();
 }
