@@ -75,21 +75,19 @@
   font-family: $font-pt-mono;
   font-size: 16px;
   line-height: 1.375;
+}
 
+.write-us--index .write-us__subtitle {
   @media (min-width: $tablet-width) {
-    &--index {
-      margin-bottom: 50px;
-    }
+    margin-bottom: 50px;
   }
 }
 
-.write-us__form {
+.write-us--index .write-us__form {
   @media (min-width: $smartphone-width) {
-    &--index {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 32px;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
   }
 }
 
@@ -97,56 +95,46 @@
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
+}
 
+.write-us--index .write-us__item {
   @media (min-width: $tablet-width) {
-    &--index {
-      margin-bottom: 40px;
-    }
+    margin-bottom: 40px;
   }
 }
 
-.write-us__name {
+.write-us--index .write-us__name {
   @media (min-width: $smartphone-width) {
-    &--index {
-      grid-row: 1 / 2;
-      grid-column: 1 / 2;
-    }
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
   }
 }
 
-.write-us__phone {
+.write-us--index write-us__phone {
   @media (min-width: $smartphone-width) {
-    &--index {
-      grid-row: 1 / 2;
-      grid-column: 2 / 3;
-    }
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
   }
 }
 
-.write-is__message {
+.write-us--index .write-is__message {
   @media (min-width: $smartphone-width) {
-    &--index {
-      grid-row: 2 / 3;
-      grid-column: 1 / 3;
-    }
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
   }
 }
 
-.write-us__send {
+.write-us--index .write-us__send {
   @media (min-width: $smartphone-width) {
-    &--index {
-      grid-row: 3 / 4;
-      grid-column: 1 / 3;
-    }
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
   }
 }
 
-.write-us__privacy {
+.write-us--index .write-us__privacy {
   @media (min-width: $smartphone-width) {
-    &--index {
-      grid-row: 5 / 6;
-      grid-column: 1 / 3;
-    }
+    grid-row: 5 / 6;
+    grid-column: 1 / 3;
   }
 }
 
