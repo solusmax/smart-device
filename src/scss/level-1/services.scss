@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .services {
   display: flex;
   justify-content: center;
@@ -109,7 +111,7 @@
   color: $color-white;
   text-decoration: none;
 
-  background-color: darken($color-cyan, 5);
+  background-color: color.adjust($color-cyan, $lightness: -5%);
   background-image: url("#{$img}/services/manufactoring-mobile.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -135,13 +137,13 @@
 
   &:hover {
     &::before {
-      background-color: darken($color-blue, 5);
+      background-color: color.adjust($color-blue, $lightness: -5%);
     }
   }
 
   &:active {
     &::before {
-      background-color: darken($color-blue, 10);
+      background-color: color.adjust($color-blue, $lightness: -10%);
     }
   }
 

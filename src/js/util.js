@@ -19,6 +19,10 @@ export const throttle = (callback, limit) => {
   };
 };
 
-export const getRootCSSVariable = (variable) => parseInt(getComputedStyle(document.documentElement).getPropertyValue(variable), 10);
+export const getRootCSSVariable = (variable) =>
+  parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue(variable),
+    10,
+  );
 
 export const isStringEmpty = (string) => String(string).length === 0;

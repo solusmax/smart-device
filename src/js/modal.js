@@ -22,7 +22,9 @@ const replaceWithButton = (element) => {
   const elementTextContent = element.textContent;
 
   if (elementClasses) {
-    elementClasses.forEach((elementClass) => newButtonNode.classList.add(elementClass));
+    elementClasses.forEach((elementClass) =>
+      newButtonNode.classList.add(elementClass),
+    );
   }
 
   newButtonNode.textContent = elementTextContent;
@@ -49,10 +51,16 @@ const openModal = () => {
 const closeModal = () => {
   modalNode.classList.remove(MODAL_SHOWN_CLASS);
 
-  closeModalNode.removeEventListener('click', listernersBuffer.onCloseModalClick);
+  closeModalNode.removeEventListener(
+    'click',
+    listernersBuffer.onCloseModalClick,
+  );
   window.removeEventListener('keydown', listernersBuffer.onEscKeydown);
   modalNode.removeEventListener('click', listernersBuffer.onNotModalAreaClick);
-  modalInnerNode.removeEventListener('click', listernersBuffer.onModalInnerClick);
+  modalInnerNode.removeEventListener(
+    'click',
+    listernersBuffer.onModalInnerClick,
+  );
 };
 
 const onOpenModalClick = () => {
@@ -68,7 +76,6 @@ const onCloseModalClick = () => {
     closeModal();
   };
 };
-
 
 const onEscKeydown = () => {
   return (evt) => {

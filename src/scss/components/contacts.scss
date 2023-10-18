@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .contacts__inner {
   display: flex;
   justify-content: flex-end;
@@ -113,7 +115,7 @@
     }
 
     &:active {
-      color: darken($color-white, 15);
+      color: color.adjust($color-white, $lightness: -15%);
 
       opacity: 1;
     }

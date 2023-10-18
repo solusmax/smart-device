@@ -4,7 +4,9 @@ import { isStringEmpty } from './util';
 const PHONE_VALIDATION_ERROR_MESSAGE = 'Вы ввели некорректный номер телефона.';
 const ERROR_OUTLINE_STYLE = '3px solid #ff2200';
 
-const writeUsPhoneFields = document.querySelectorAll('.write-us__phone > input');
+const writeUsPhoneFields = document.querySelectorAll(
+  '.write-us__phone > input',
+);
 
 const reportValidationError = (field, string, style) => {
   field.style.outline = style;
@@ -16,7 +18,7 @@ const reportNoValidationError = (field) => reportValidationError(field, '', '');
 
 export const setWriteUsListeners = () => {
   writeUsPhoneFields.forEach((phoneFieldNode) => {
-    phoneFieldNode.addEventListener('change', () => {
+    phoneFieldNode.addEventListener('input', () => {
       const phoneNumber = String(phoneFieldNode.value);
 
       if (isStringEmpty(phoneNumber)) {
@@ -27,7 +29,11 @@ export const setWriteUsListeners = () => {
       }
 
       if (!isValidPhoneNumber(phoneNumber)) {
-        reportValidationError(phoneFieldNode, PHONE_VALIDATION_ERROR_MESSAGE, ERROR_OUTLINE_STYLE);
+        reportValidationError(
+          phoneFieldNode,
+          PHONE_VALIDATION_ERROR_MESSAGE,
+          ERROR_OUTLINE_STYLE,
+        );
         return;
       }
 

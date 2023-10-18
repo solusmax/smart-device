@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .button {
   display: block;
   padding-left: 11px;
@@ -24,11 +26,11 @@
   transition-duration: $transition-duration;
 
   &:hover {
-    background-color: darken($color-blue, 5);
+    background-color: color.adjust($color-blue, $lightness: -5%);
   }
 
   &:active {
-    background-color: darken($color-blue, 10);
+    background-color: color.adjust($color-blue, $lightness: -10%);
   }
 
   &--header {
@@ -47,9 +49,9 @@
     }
 
     &:active {
-      border-color: darken($color-white, 10);
+      border-color: color.adjust($color-white, $lightness: -10%);
 
-      background-color: darken($color-white, 10);
+      background-color: color.adjust($color-white, $lightness: -10%);
     }
   }
 
@@ -80,7 +82,7 @@
 
     &:active {
       color: $color-white;
-      background-color: darken($color-blue, 5);
+      background-color: color.adjust($color-blue, $lightness: -5%);
     }
   }
 
@@ -102,7 +104,7 @@
 
     &:active {
       color: $color-blue;
-      background-color: darken($color-white, 5);
+      background-color: color.adjust($color-white, $lightness: -5%);
     }
   }
 

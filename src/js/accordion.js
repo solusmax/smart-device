@@ -8,8 +8,11 @@ const accordions = document.querySelectorAll('.accordion');
 export const setAccordionsListeners = () => {
   accordions.forEach((accordionNode) => {
     const accordionTitleNode = accordionNode.querySelector('.accordion__title');
-    const accordionContentNode = accordionNode.querySelector('.accordion__content');
-    const allAccordionContentElements = accordionContentNode.querySelectorAll('*');
+    const accordionContentNode = accordionNode.querySelector(
+      '.accordion__content',
+    );
+    const allAccordionContentElements =
+      accordionContentNode.querySelectorAll('*');
 
     // Надпись в кнопке
     const accordionButtonTextNode = document.createElement('span');
@@ -37,9 +40,11 @@ export const setAccordionsListeners = () => {
     };
 
     const hideAccordionContent = () => {
-      const accordionContentHeight = getComputedStyle(accordionContentNode).getPropertyValue('height');
+      const accordionContentHeight =
+        getComputedStyle(accordionContentNode).getPropertyValue('height');
 
-      accordionContentNode.style.marginTop = -1 * parseInt(accordionContentHeight, 10) + 'px';
+      accordionContentNode.style.marginTop =
+        -1 * parseInt(accordionContentHeight, 10) + 'px';
     };
 
     const showAccordionContent = () => {
@@ -47,7 +52,10 @@ export const setAccordionsListeners = () => {
     };
 
     const updateAccordionContentVisibility = () => {
-      if (accordionNode.classList.contains(ACCORDION_CLOSED_CLASS) && isSmartphoneAndLesser()) {
+      if (
+        accordionNode.classList.contains(ACCORDION_CLOSED_CLASS) &&
+        isSmartphoneAndLesser()
+      ) {
         hideAccordionContent();
         disableFocusOnAccordionContentElements();
         return;
@@ -57,9 +65,11 @@ export const setAccordionsListeners = () => {
       enableFocusOnAccordionContentElements();
     };
 
-    const toggleAccordion = () => accordionNode.classList.toggle(ACCORDION_CLOSED_CLASS);
+    const toggleAccordion = () =>
+      accordionNode.classList.toggle(ACCORDION_CLOSED_CLASS);
 
-    const closeAccordion = () => accordionNode.classList.add(ACCORDION_CLOSED_CLASS);
+    const closeAccordion = () =>
+      accordionNode.classList.add(ACCORDION_CLOSED_CLASS);
 
     const onAccordionButtonClick = () => {
       toggleAccordion();
